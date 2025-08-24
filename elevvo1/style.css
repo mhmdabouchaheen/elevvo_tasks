@@ -1,0 +1,117 @@
+:root {
+    --sidebar-bg: #1e293b;
+    --logo-bg: #0ea5e9;
+    --text-color: #f8fafc;
+    --hover-bg: #334155;
+    --main-bg: #0f172a;
+}
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    background: var(--main-bg);
+    color: #e2e8f0;
+    margin: 0;
+    padding: 0;
+    transition: margin-left 0.3s;
+}
+
+.sidebar {
+    width: 220px;
+    height: 100vh;
+    background: var(--sidebar-bg);
+    position: fixed;
+    transition: width 0.3s ease;
+    border-right: 2px solid var(--logo-bg);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: var(--logo-bg);
+    gap: 8px;
+}
+
+.logo img {
+    width: 24px;
+    height: 24px;
+    border-radius: 4px;
+}
+
+.logo-text {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links {
+    list-style: none;
+    padding: 10px 0;
+}
+
+.nav-links li a {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    margin: 4px 8px;
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.nav-links li a:hover {
+    background: var(--hover-bg);
+    transform: translateX(4px);
+}
+
+.nav-links i {
+    margin-right: 12px;
+    font-size: 1rem;
+}
+
+.toggle-btn {
+    position: absolute;
+    bottom: 15px;
+    left: 15px;
+    background: var(--logo-bg);
+    color: white;
+    border: none;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.toggle-btn:hover {
+    transform: scale(1.1);
+}
+
+.main-content {
+    margin-left: 220px;
+    padding: 25px;
+    min-height: 100vh;
+    transition: margin-left 0.3s;
+}
+
+/* Collapsed State */
+.sidebar.collapsed {
+    width: 70px;
+}
+
+.sidebar.collapsed .logo-text,
+.sidebar.collapsed .link-text {
+    display: none;
+}
+
+.sidebar.collapsed ~ .main-content {
+    margin-left: 70px;
+}
+
+.sidebar.collapsed .toggle-btn i {
+    transform: rotate(180deg);
+}

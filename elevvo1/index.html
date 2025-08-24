@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Sidebar</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="sidebar" id="sidebar">
+        <!-- Logo -->
+        <div class="logo">
+            <img src="C:\Users\CLICK ONCE\OneDrive\Desktop\project\elevvo1\images\img1.png" alt="Logo">
+            <span class="logo-text">YourBrand</span>
+        </div>
+
+        <!-- Navigation Links -->
+        <ul class="nav-links">
+            <li>
+                <a href="#">
+                    <i class="fas fa-home" style="color: #f97316;"></i>
+                    <span class="link-text">Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-chart-line" style="color: #10b981;"></i>
+                    <span class="link-text">Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-envelope" style="color: #3b82f6;"></i>
+                    <span class="link-text">Messages</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-cog" style="color: #8b5cf6;"></i>
+                    <span class="link-text">Settings</span>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fas fa-sign-out-alt" style="color: #ef4444;"></i>
+                    <span class="link-text">Logout</span>
+                </a>
+            </li>
+        </ul>
+
+        <!-- Toggle Button -->
+        <button class="toggle-btn" id="toggleBtn">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+    </div>
+
+    <!-- Main Content -->
+    <div class="main-content" id="mainContent">
+        <h1>Dashboard</h1>
+        <p>Click the <i class="fas fa-chevron-left"></i> button to toggle the sidebar.</p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
